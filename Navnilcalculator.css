@@ -1,0 +1,85 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:"Roboto",  monospace;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(120deg, rgb(132, 203, 132), rgb(9, 146, 170));
+    height:100vh; /*If Omitted then the Position parameter in .calcukator when set to absolute make the background color white. Why?*/
+    /* position:relative; */
+}
+
+.calculator{
+    /* border:red solid 2px; */
+    width:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding:20px 20px;
+    background-color: rgb(14, 14, 14);
+    border-radius:10px;
+    box-shadow: 10px 10px 20px rgb(21, 20, 20);
+}
+
+.calculator #userInputDisplay{
+    width:100%;
+    height:5rem;
+    border:none;
+    outline:none;
+    background:black;
+    padding:10px 20px;
+    text-align:right;
+    font-size:2rem;
+    color:rgb(70, 228, 70);
+    border-radius:10px;
+    box-shadow: 3px 3px 50px rgb(136, 134, 134);
+    margin-top:20px;
+}
+
+.calculator #userInputDisplay::placeholder{
+    color:rgb(70, 228, 70);
+}
+
+.calculator .buttons{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top:40px;
+    /* margin-left:10px; */
+    gap:20px;
+    width:100%;
+    height:350px;
+}
+
+.calculator .buttons button{
+    cursor:pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(129, 124, 124);
+    color: white;
+}
+.calculator .buttons button:hover{
+    font-weight:600;
+    box-shadow: 3px 3px 50px rgb(136, 134, 134);
+}
+
+.calculator .buttons button[value="0"]{
+    grid-column: span 2;
+}
+
+.calculator .buttons button[value="="]{
+    grid-row: span 2;   
+}
+
+.calculator .buttons .speciallBtn{
+    background-color:rgb(226, 154, 19);
+    color:black;
+    font-weight:600
+}
+
+
